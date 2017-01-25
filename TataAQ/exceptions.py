@@ -1,2 +1,5 @@
-class ApiError(Exception):
+class RequestError(Exception):
+    pass
+
+class KeywordError(Exception):
     pass
