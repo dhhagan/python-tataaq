@@ -11,7 +11,7 @@ except:
 	from distutils.core import setup
 
 setup(
-	name = 'TataAQ',
+	name = 'tataaq',
 	version = __version__,
 	description = 'Python wrapper for the TataAQ API',
 	keywords = ['TataAQ', 'MIT', 'Air Quality', 'Tata Center'],
@@ -19,7 +19,7 @@ setup(
 	author_email = 'david@davidhhagan.com',
 	url = 'https://github.com/dhhagan/py-tata',
 	license = 'MIT',
-	packages = ['TataAQ'],
+	packages = ['tataaq'],
 	test_suite = 'tests',
 	classifiers = [
 		'Development Status :: 3 - Alpha',
