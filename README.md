@@ -19,18 +19,6 @@ You must obtain an API Key from the portal using your current TataAQ account.
 
     status, resp = api.ping()
 
-## Get E-BAM Data
+## Docs
 
-    params = {
-        'expand': True,
-        'per_page': 250,
-        'page': 1
-    }
-
-    status, resp = api.ebam(params=params)
-
-    # Access Meta Information
-    resp['meta']
-
-    # Access Data
-    resp['data']
+Check the examples folder for basic documentation and examples.
