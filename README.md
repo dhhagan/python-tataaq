@@ -7,7 +7,7 @@ There are several options for installation of the package and are outlined here:
 
 ## Clone and Install
 
-    $ git clone git@github.com:dhhagan/py-tata.git
+    $ git clone git@github.com/dhhagan/py-tata.git
     $ cd py-tata
     $ python3 setup.py install
 
