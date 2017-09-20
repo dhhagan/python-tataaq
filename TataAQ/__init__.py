@@ -2,7 +2,7 @@
 import requests
 
 from .exceptions import RequestError
-from .decorators import makedataframe
+from .decorators import makedataframe, requires_kws
 
 from pkg_resources import get_distribution
 
@@ -86,9 +86,10 @@ class TataAQ(API):
         """Required fields: None."""
         return self._get('device/{}'.format(sn) if sn else 'device', **kwargs)
 
+    @requires_kws(['sn'])
     @makedataframe()
     def data(self, sn, **kwargs):
-        """Required Fields: None."""
+        """Required Fields: SN."""
         return self._get('device/{}/data/'.format(sn), **kwargs)
 
     @makedataframe()
