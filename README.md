@@ -33,7 +33,7 @@ You must obtain an API Key from the portal using your current TataAQ account.
 
     status, resp = api.ping()
 
-## Get E-BAM Data
+## Docs
 
     params = {
         'expand': True,
