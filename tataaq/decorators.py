@@ -16,7 +16,6 @@ def requires_kws(required_kwargs):
         return wrapped_f
     return wrap
 
-
 def makedataframe():
     """Turn the resp into a DataFrame."""
     def decorator(f):

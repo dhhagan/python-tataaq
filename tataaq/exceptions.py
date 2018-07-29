@@ -1,13 +1,13 @@
 """Create exceptions for this library."""
 
 
-class RequestError(Exception):
+class TataRequestError(Exception):
     """Error with a Request."""
 
     pass
 
 
-class KeywordError(Exception):
+class RequestKeywordError(Exception):
     """Error with a keyword."""
 
     pass

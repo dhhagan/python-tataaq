@@ -2,14 +2,21 @@
 import unittest
 import tataaq
 import pandas as pd
-from tataaq.exceptions import RequestError, KeywordError
+from tataaq.exceptions import TataRequestError, RequestKeywordError
 
 device_sn = "TREX001"
 
 
 class SetupTestCase(unittest.TestCase):
     """Run the unittests."""
+    def setUp(self):
+        self.api = tataaq.Api()
 
+    def tearDown(self):
+        pass
+        
+
+    """
     def setUp(self):
         self.test_key = '2JIUSQNEJM1N8M44NALA6JA4'
         self.api = tataaq.TataAQ(apikey=self.test_key)
@@ -91,3 +98,4 @@ class SetupTestCase(unittest.TestCase):
         self.assertIsNotNone(meta['last_url'])
         self.assertIsNotNone(meta['per_page'])
         self.assertIsNotNone(meta['total'])
+    """

@@ -1,29 +1,45 @@
-# py-tata
-Python wrapper for the Tata Center Air Quality website
+Python TataAQ
 
-# Installation
+A Python wrapper around the Tata AQ API.
 
-There are several options for installation of the package and are outlined here:
+By David H Hagan, MIT
 
-## Clone and Install
+# Introduction
+
+This library provides a pure python interface to the Tata Center Air Quality Project API.
+It works with Python versions 2.7+ and Python3.
+
+## Installing
+
+There are several options for installation of the package; you can install the library by
+first cloning the GitHub repo and installing from source:
 
     $ git clone git@github.com/dhhagan/py-tata.git
     $ cd py-tata
     $ python3 setup.py install
 
-## Download zip file and install from source
+You can also download the zip file and install from source:
 
-Download the zip file, navigate to the directory you saved it in, and run the following:
+  1. download the zip file
+  2. `$ python3 setup.py install (--upgrade)`
 
-    $ python3 setup.py install (--upgrade)
-
-## Install directly from GitHub (preferred)
+Or, you could install the library directly from GitHub (preferred):
 
     $ pip install git+https://github.com:dhhagan/py-tata.git
 
-# Authentication Credentials
 
-You must obtain an API Key from the portal using your current TataAQ account.
+## Authentication Credentials
+
+To use the API, you must have an API key (http basic auth), which can be found by
+logging on to your account and adding a key. You should then save your key as an
+environment variable (the process is unique to your operating system). For example, on a
+Mac with High Sierra, you can open your bash profile and save the variable as follows:
+
+  1. nano ~/.bash_profile
+  2. add a line to the file with:
+
+        `export TATAAQ_APIKEY=<api-key-goes-here>`
+
 
 # Basic Use
 
