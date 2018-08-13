@@ -2,26 +2,28 @@
 	Python wrapper for the TataAQ API
 	Written originally by David H Hagan
 	July 2016
+
+	Updated August 2018
 '''
-__version__ = '0.2.0'
+import os
 
 try:
 	from setuptools import setup
-except:
+except ImportError:
 	from distutils.core import setup
 
 setup(
-	name = 'tataaq',
-	version = __version__,
-	description = 'Python wrapper for the TataAQ API',
-	keywords = ['TataAQ', 'MIT', 'Air Quality', 'Tata Center'],
-	author = 'David H Hagan',
-	author_email = 'david@davidhhagan.com',
-	url = 'https://github.com/dhhagan/py-tata',
-	license = 'MIT',
-	packages = ['tataaq'],
-	test_suite = 'tests',
-	classifiers = [
+	name='python-tataaq',
+	version="0.3.0",
+	description='Python wrapper for the TataAQ API',
+	keywords=['TataAQ', 'MIT', 'Air Quality', 'Tata Center'],
+	author='David H Hagan',
+	author_email='dhagan@mit.edu',
+	url='https://github.com/dhhagan/py-tata',
+	license='MIT',
+	packages=['tataaq'],
+	test_suite='tests',
+	classifiers=[
 		'Development Status :: 3 - Alpha',
 		'Operating System :: OS Independent',
 		'Intended Audience :: Science/Research',
