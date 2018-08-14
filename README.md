@@ -1,6 +1,6 @@
-Python TataAQ
 
-A Python wrapper around the Tata AQ API.
+
+`python-tataaq` is an object-first python wrapper for the [Tata Center Air Quality API][1].
 
 By David H Hagan, MIT
 
@@ -9,61 +9,42 @@ By David H Hagan, MIT
 This library provides a pure python interface to the Tata Center Air Quality Project API.
 It works with Python versions 2.7+ and Python3.
 
-## Installing
+## Installation
 
-There are several options for installation of the package; you can install the library by
-first cloning the GitHub repo and installing from source:
+There are a couple of easy options for installation of the package:
+
+For development purposes, clone the repo locally:
 
     $ git clone git@github.com/dhhagan/py-tata.git
     $ cd py-tata
     $ python3 setup.py install
 
-You can also download the zip file and install from source:
-
-  1. download the zip file
-  2. `$ python3 setup.py install (--upgrade)`
-
-Or, you could install the library directly from GitHub (preferred):
+Or, install the library directly from GitHub (preferred) using pip:
 
     $ pip install git+https://github.com:dhhagan/py-tata.git
 
 
-## Authentication Credentials
+## Authentication/API Key
 
-To use the API, you must have an API key (http basic auth), which can be found by
-logging on to your account and adding a key. You should then save your key as an
+To use the API, you must have an API key (http basic auth), which can be found by logging on to your account and adding a key. You should then save your key as an
 environment variable (the process is unique to your operating system). For example, on a
-Mac with High Sierra, you can open your bash profile and save the variable as follows:
+Mac with High Sierra, you can save the variable to your bash profile:
 
-  1. nano ~/.bash_profile
-  2. add a line to the file with:
+  1. Open the file:
+
+      `$ nano ~/.bash_profile`
+
+  2. Add a line to the file with:
 
         `export TATAAQ_APIKEY=<api-key-goes-here>`
+  3. Open a new terminal or source the file:
 
+        `$ source ~/.bash_profile`
 
-# Basic Use
-
-    import tataaq
-
-    api = tataaq.TataAQ(apikey='key_goes_here')
-
-    status, resp = api.ping()
 
 ## Docs
 
-    params = {
-        'expand': True,
-        'per_page': 250,
-        'page': 1
-    }
-
-    status, resp = api.ebam(params=params)
-
-    # Access Meta Information
-    resp['meta']
-
-    # Access Data
-    resp['data']
+Please see the [docs folder][2] for documentation.
 
 ## Unittests
 
@@ -71,7 +52,10 @@ Tests can be run using the following command (with and without coverage)
 
     $ python3 setup.py test
 
-With coverage:
+Or, with coverage:
 
     $ coverage run --source py-tata setup.py test
     $ coverage report -m
+
+[1]: https://tatacenter-airquality.mit.edu/docs
+[2]: /docs
